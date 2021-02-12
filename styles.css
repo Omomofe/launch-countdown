@@ -1,0 +1,103 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(234, 17%, 12%);
+  font-family: 'Red Hat Text', sans-serif;
+  letter-spacing: 3px;
+}
+.container {
+  width: 100%;
+  height: 80vh;
+  background-image: url("images/bg-stars.svg");
+  position: relative;
+}
+.countdown-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 15%;
+  text-align: center;
+  color:hsl(0, 0%, 100%);
+}
+.countdown-wrapper h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8rem;
+  /* text-shadow: 0.5rem 0.8rem rgba(0, 0, 0, 0.5); */
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+}
+
+.countdown div {
+  color: hsl(345, 95%, 68%);
+  border-radius: 12px;
+  width: 13rem;
+  height: 10rem;
+  background: linear-gradient(to bottom,  hsl(235, 22%, 30%) 50%, hsl(236, 21%, 26%)0);
+  margin: 0.4% 3% 1%;
+  font-size: 7rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.8rem,2.5rem,rgba(0, 0, 0, 0.5);
+
+
+}
+
+.countdown h1 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+.countdown div::before {
+  content: "";
+  position: absolute;
+
+  height: 1px;
+  background-color:hsl(234, 17%, 12%);
+}
+
+.countdown div::after {
+  color: hsl(237, 18%, 59%);
+  content: attr(data-content);
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  bottom: -2rem;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-image: url("images/pattern-hills.svg");
+  height: 20vh;
+  background-position: center;
+}
+
+.footer a {
+  padding: 4% 1% 0;
+  color: hsl(237, 18%, 59%);
+
+}
+.footer a:hover {
+  color: hsl(345, 95%, 68%);
+}
+@media (max-width: 600px) {
+  .countdown div {
+    height: 5rem;
+    width: 7rem;
+    font-size: 2rem;
+  }
+  .footer {
+    background-position: right;
+  }
+}
